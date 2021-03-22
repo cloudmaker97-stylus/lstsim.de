@@ -1,0 +1,428 @@
+/*
+-------- Allgemeines
+*/
+:root
+{
+    --background: #1d1d1d;
+    --contentBoxBackground: #2d2d2d;
+    --contentBoxBackgroundSecondary: #222;
+    --textPrimary: #fff;
+    --textSecondary: #c9c9c9;
+    --textShortcut: #d7f0a8;
+    --buttonBackground: #282828;
+    --buttonBackgroundSecondary: #525252;
+    --buttonTextPrimary: #dcdcdc;
+    --buttonTextSecondary: #e2e2e2;
+    --vehicleBackgroundColor: #322e2e;
+    --sceneBackground: #373737;
+    --sceneContentBackground: #0b0b0b;
+    --sceneBackgroundActive: --sceneTitleColor: --sceneTitleActiveColor:
+}
+::-webkit-scrollbar
+{
+    width: 5px;
+}
+::-webkit-scrollbar-track
+{
+    background: var(--contentBoxBackground);
+}
+::-webkit-scrollbar-thumb
+{
+    background: #525252;
+}
+body
+{
+    background-color: var(--background);
+}
+body > #gradient
+{
+    display: none;
+}
+.containerbox .draghandle
+{
+    background-color: var(--contentBoxBackgroundSecondary);
+}
+
+/*
+Karte (Dark-Mode)
+*/
+canvas.ol-unselectable {
+    filter: grayscale(30%) brightness(0.5);
+}
+
+.ol-overlaycontainer {
+    filter: none !important;
+}
+
+/*
+Fahrzeugfarben
+*/
+.status_row.status_6::parent:parent
+{
+    background-color: black;
+}
+.log_car_type_rth,
+.log_car_type.log_car_type_nef,
+.log_car_type.log_car_type_naw
+{
+    color: #ff7676;
+}
+.log_car_type.log_car_type_rtw
+{
+    color: #b38c13;
+}
+.log_car_type.log_car_type_fr
+{
+    color: #ca7364;
+}
+/*
+-------- Funkgespräche
+*/
+#logpanel
+{
+    background-color: var(--contentBoxBackground);
+}
+#logpanel > .content > .topbar
+{
+    color: white;
+    background-color: var(--contentBoxBackgroundSecondary);
+}
+#logpanel > .content > .topbar > #clock
+{
+    color: var(--textSecondary);
+    background-color: transparent;
+}
+.logcontainer > .logitems > .logitem > .logcontent > .text
+{
+    color: var(--textPrimary);
+}
+/*
+-------- Einsatzkarte
+*/
+#map_container
+{
+    background-color: var(--contentBoxBackground);
+}
+/*
+-------- Kräfteübersicht
+*/
+#carpanel
+{
+    background-color: var(--contentBoxBackground);
+}
+#sortcarsby
+{
+    background-color: var(--contentBoxBackground);
+    color: var(--textSecondary);
+}
+#carlist > div > h3 > .container
+{
+    background-color: var(--vehicleBackgroundColor);
+}
+#cardetails
+{
+    color: var(--textPrimary);
+}
+
+/*
+-------- Einsatzmaske
+*/
+.ui-dialog,
+.ui-dialog .dialog,
+.ui-dialog .ui-dialog-title {
+    background: var(--contentBoxBackground) !important;
+    color: var(--textPrimary);
+}
+
+.keyword .desc_title:first-child {
+    display: none;
+}
+
+.keyword .desc_title:first-child:after {
+    color: var(--textPrimary);
+    content: 'Tesf';
+}
+
+.car_list .selected td {
+    background-color: #535353 !important;
+}
+
+.ui-dialog button
+{
+    background: var(--buttonBackground);
+    color: var(--textPrimary);
+    border: 1px solid white;
+    margin: 2px 0px 2px;
+}
+
+.shortcut {
+    color: var(--textShortcut) !important;
+    text-decoration: underline;
+}
+
+.dialog_ok[shortcut="A"] {
+    background-color: #3d4e3c !important;
+}
+
+.ui-dialog button span {
+    color: white;
+}
+
+/*
+-------- Einsatzliste
+*/
+#missionlist .ui-widget-content {
+    background: var(--contentBoxBackground) !important;
+}
+
+#missionpanel .submenu
+{
+    float: right;
+}
+#missionpanel .submenu > .mission_feedback
+{
+    display: none;
+    visibility: hidden;
+}
+#missionpanel > #missionlist > .tabs > div > div
+{
+    background-color: var(--contentBoxBackground) !important;
+}
+#missionpanel .header .text,
+#missionpanel .header .type
+{
+    color: white !important;
+}
+#missionpanel > #missionlist > .tabs
+{
+    color: white;
+    background-color: var(--contentBoxBackground);
+}
+#missionpanel > #missionlist > .tabs > .ui-tabs-panel
+{
+    color: white;
+    background-color: var(--contentBoxBackground);
+}
+#missionpanel > #missionlist > .tabs > .ui-widget-header > li
+{
+    background: none;
+}
+#missiontab_0 > div > .ui-accordion-header,
+#missiontab_1 > div > .ui-accordion-header,
+#missiontab_2 > div > .ui-accordion-header
+{
+    background: var(--sceneBackground);
+}
+#missiontab_0 > div > .content,
+#missiontab_1 > div > .content,
+#missiontab_2 > div > .content
+{
+    background: var(--sceneBackground);
+    color: var(--textPrimary);
+}
+.realcontent > button
+{
+    background: var(--buttonBackground);
+    color: var(--textPrimary);
+    border: 1px solid transparent;
+    margin: 2px 0px 2px;
+}
+button.carmenu
+{
+    background: var(--buttonBackground);
+    color: var(--textPrimary);
+    border: 1px solid white;
+    margin: 2px 0px 2px;
+}
+.realcontent > button:hover,
+.logcontent .buttons button,
+button.carmenu:hover
+{
+    background: var(--buttonBackgroundSecondary);
+    color: var(--textPrimary);
+    border: 1px solid var(--textPrimary);
+}
+.realcontent > .patient_row *,
+em
+{
+    font-size: 1.2em !important
+}
+.ui-widget-header,
+.ui-widget-header > li
+{
+    border: 1px solid #aaaaaa;
+    background: none;
+}
+.ui-tabs-nav > li > a > div > span
+{
+    color: #939393 !important;
+}
+/*
+-------- Gesprächsliste
+*/
+#phonepanel
+{
+    background-color: var(--contentBoxBackground);
+}
+#phonepanel .menu
+{
+    background-color: var(--contentBoxBackgroundSecondary);
+}
+#phonepanel .menu > ul > li
+{
+    background-color: var(--buttonBackground);
+    color: var(--textPrimary);
+}
+#phonepanel .menu > ul > li
+{
+    background-color: var(--buttonBackground);
+    color: var(--textPrimary);
+}
+#phonepanel .content > .logcontainer > .logitems > .logitem > .leftcolumn > .time
+{
+    color: var(--textSecondary);
+}
+#phonepanel .content > .logcontainer > .logitems > .logitem > .logcontent .text
+{
+    color: var(--textPrimary);
+}
+#popupmenu li
+{
+    background-color: var(--buttonBackgroundSecondary);
+    color: var(--textPrimary);
+}
+#popupmenu li:hover
+{
+    background-color: var(--buttonBackground);
+    color: var(--textPrimary);
+}
+/* Buttons */
+#phonepanel .content > .logcontainer > .logitems > .logitem > .logcontent > .buttons > button
+{
+    background-color: var(--buttonBackground);
+    color: var(--buttonTextPrimary);
+    border: 1px transparent solid;
+    margin: 2px 0px 4px 0px;
+}
+#phonepanel .content > .logcontainer > .logitems > .logitem > .logcontent > .buttons > button:hover
+{
+    background-color: var(--buttonBackgroundSecondary);
+    color: var(--buttonTextSecondary);
+    border: 1px var(--buttonTextSecondary) solid;
+}
+#phonepanel .content > .logcontainer > .interactions > button
+{
+    width: 140px;
+    background-color: var(--buttonBackground);
+    color: var(--buttonTextPrimary);
+    border: 1px transparent solid;
+    margin-bottom: 3px;
+}
+#phonepanel .content > .logcontainer > .interactions > button:hover
+{
+    background-color: var(--buttonBackgroundSecondary);
+    color: var(--buttonTextSecondary);
+    border: 1px var(--buttonTextSecondary) solid;
+}
+/* 
+-------- Statusmeldungen
+Farben der Statusmeldungen:
+1 #517e35
+2 #818181
+3 #ff5c25
+4 #8c4229
+5 #036292
+6 #850000
+7 #4fffa9
+8 #ff602d
+9 #00f829
+*/
+.patient_row .status
+{
+    padding: 1px !important;
+}
+.status_row,
+.status
+{
+    color: var(--textPrimary) !important;
+}
+h3 > .container > .status_row > .status,
+.realcontent > .patient_row > .status_row > .status,
+.logcontent > .text > .log_car_status
+{
+    font-family: 'Arial';
+    font-style: normal;
+    color: white !important;
+    font-size: 1.1em !important;
+}
+h3 > .container > .status_row.status_1 > .status,
+.realcontent > .patient_row > .status_row.status_1 > .status,
+.logcontent > .text > .log_car_status.log_car_status_1,
+.status_row.status_1 .status, .log_car_status_1
+{
+    background-color: #748c64 !important;
+}
+h3 > .container > .status_row.status_2 > .status,
+.realcontent > .patient_row > .status_row.status_2 > .status,
+.logcontent > .text > .log_car_status.log_car_status_2,
+.status_row.status_2 .status, .log_car_status_2
+{
+    background-color: #3e7041 !important;
+}
+h3 > .container > .status_row.status_3 > .status,
+.status_row.status_3 .status,
+.log_car_status_3,
+.logcontent > .text > .log_car_status.log_car_status_3,
+.status_row.status_3 .status, .log_car_status_3
+{
+    background-color: #55465b !important;
+}
+h3 > .container > .status_row.status_4 > .status,
+.realcontent > .patient_row > .status_row.status_4 > .status,
+.logcontent > .text > .log_car_status.log_car_status_4,
+.status_row.status_4 .status, .log_car_status_4
+{
+    background-color: #8c4229 !important;
+}
+h3 > .container > .status_row.status_5 > .status,
+.realcontent > .patient_row > .status_row.status_5 > .status,
+.logcontent > .text > .log_car_status.log_car_status_5,
+.status_row.status_5 .status, .log_car_status_5
+{
+    background-color: #036292 !important;
+}
+h3 > .container > .status_row.status_6 > .status,
+.realcontent > .patient_row > .status_row.status_6 > .status,
+.logcontent > .text > .log_car_status.log_car_status_6,
+.status_row.status_6 .status, .log_car_status_6
+{
+    background-color: #850000 !important;
+}
+h3 > .container > .status_row.status_7 > .status,
+.realcontent > .patient_row > .status_row.status_7 > .status,
+.logcontent > .text > .log_car_status.log_car_status_7,
+.status_row.status_7 .status, .log_car_status_7
+{
+    background-color: #38614d !important;
+}
+h3 > .container > .status_row.status_8 > .status,
+.realcontent > .patient_row > .status_row.status_8 > .status,
+.logcontent > .text > .log_car_status.log_car_status_8
+.status_row.status_8 .status, .log_car_status_8
+{
+    background-color: #ff602d !important;
+}
+h3 > .container > .status_row.status_9 > .status,
+.realcontent > .patient_row > .status_row.status_9 > .status,
+.logcontent > .text > .log_car_status.log_car_status_9,
+.status_row.status_9 .status, .log_car_status_9
+{
+    background-color: #00f829 !important;
+}
+/*
+Statusmeldung "Heim-Fahrt"
+*/
+.logcontent > .text > .log_car_status_H
+{
+    color: black;
+}
